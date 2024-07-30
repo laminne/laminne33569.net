@@ -1,4 +1,3 @@
-import { TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Avatar, Box, Card, Flex, Link, Text } from "@radix-ui/themes";
 import React, { ReactNode } from "react";
 import { RxPencil1 } from "react-icons/rx";
@@ -8,6 +7,7 @@ import {
   SiGithub,
   SiKeybase,
   SiWantedly,
+  SiX,
 } from "react-icons/si";
 
 type ServiceIconKey =
@@ -32,7 +32,7 @@ export interface SocialAccountProps {
 }
 
 const serviceIconMap = new Map<ServiceIconKey, ReactNode>([
-  ["Twitter", <TwitterLogoIcon />],
+  ["Twitter", <SiX />],
   ["GitHub", <SiGithub />],
   ["Facebook", <SiFacebook />],
   ["Wantedly", <SiWantedly />],
@@ -49,7 +49,7 @@ export const SocialAccount: React.FC<SocialAccountProps> = (props) => {
           <Avatar size="3" radius="full" fallback="l" />
           <Box>
             <Box>
-              <Flex gap="1" align="baseline">
+              <Flex gap="2" align="center">
                 <Text as="p" size="3">
                   <Link href={props.url} underline="always">{props.accountNickname}</Link>
                 </Text>
