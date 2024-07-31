@@ -43,20 +43,20 @@ const serviceIconMap = new Map<ServiceIconKey, ReactNode>([
 
 export const SocialAccount: React.FC<SocialAccountProps> = (props) => {
   return (
-    <Box maxWidth="15rem">
+    <Box maxWidth="40rem" width="20rem">
       <Card>
         <Flex gap="3" align="center">
-          <Avatar size="3" radius="full" fallback="l" />
+          <Avatar size="4" radius="full" fallback="l" src={props.iconURL} />
           <Box>
             <Box>
               <Flex gap="2" align="center">
-                <Text as="p" size="3">
+                <Text as="p" size="4">
                   <Link href={props.url} underline="always">{props.accountNickname}</Link>
                 </Text>
                 {serviceIconMap.get(props.serviceIconKey)}
               </Flex>
             </Box>
-            <Text as="p" size="1" color="gray">
+            <Text as="p" size="2" color="gray">
               {props.accountName}
             </Text>
           </Box>

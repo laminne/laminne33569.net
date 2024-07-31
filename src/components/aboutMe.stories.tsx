@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Achievements } from './achievements';
+import { AboutMe } from './aboutMe';
 
 const meta = {
-  component: Achievements,
-} satisfies Meta<typeof Achievements>;
+  component: AboutMe,
+} satisfies Meta<typeof AboutMe>;
 
 export default meta;
 

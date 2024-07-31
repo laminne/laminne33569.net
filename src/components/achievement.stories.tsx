@@ -11,12 +11,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    imageURL: "https://github.com/laminne.png",
-    title: "title",
-    date: new Date("2004-05-16T08:00:00.000Z"),
-    showDetail: true,
-    description: "new Human(props);",
-    tags: ["受賞", "登壇", "参加", "その他", "開発"],
+  args:   {
+    title: "第1回 Matz葉がにロボコン 大会運営支援システム開発",
+    description: "松江市で開催された小学生向けのロボコン大会「Matz葉がにロボコン」の運営支援を行うシステム「KCMS」を開発しました。",
+    tags: ["開発"],
+    imageURL: "/kcms.png",
+    date: new Date("2024-01-06T00:00:00.000"),
+    showDetail: false,
+    links: [["テストリンク", "https://laminne33569.net"]]
   }
 };

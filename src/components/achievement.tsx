@@ -1,4 +1,13 @@
-import { Badge, Box, Card, Flex, Heading, Inset, Text } from "@radix-ui/themes";
+import {
+  Badge,
+  Box,
+  Card,
+  Flex,
+  Heading,
+  Inset,
+  Link,
+  Text,
+} from "@radix-ui/themes";
 import React, { ReactNode } from "react";
 
 export interface AchievementCardProps {
@@ -14,6 +23,8 @@ export interface AchievementCardProps {
   description: string;
   /** タグ */
   tags: achievementTagKey[];
+  /** リンク */
+  links?: [string, string][];
 }
 
 export type achievementTagKey = "受賞" | "登壇" | "開発" | "参加" | "その他";
@@ -25,10 +36,18 @@ const achievementTagMap = new Map<achievementTagKey, ReactNode>([
   ["その他", <Badge color="gray">⭐️ その他</Badge>],
 ]);
 
-export const AchievementCard: React.FC<AchievementCardProps> = ({date, imageURL, tags, title, description, showDetail}) => {
-  const dateDetail = `${date.getFullYear().toString()}年 ${(date.getMonth()+1).toString()}月`;
+export const AchievementCard: React.FC<AchievementCardProps> = ({
+  date,
+  imageURL,
+  tags,
+  title,
+  description,
+  links,
+  showDetail,
+}) => {
+  const dateDetail = `${date.getFullYear().toString()}年 ${(date.getMonth() + 1).toString()}月`;
   return (
-    <Box maxWidth="20rem" height="100%">
+    <Box maxWidth="20rem">
       <Card size="3">
         <Inset clip="padding-box" side="top" pb="current">
           <img
@@ -43,13 +62,20 @@ export const AchievementCard: React.FC<AchievementCardProps> = ({date, imageURL,
           />
         </Inset>
         <Box>
-          <Heading as="h2" mb=".5rem" wrap="pretty">{title}</Heading>
+          <Heading as="h2" mb=".5rem" wrap="pretty">
+            {title}
+          </Heading>
           <Flex gap="2" mb=".5rem" wrap="wrap">
             {tags.map((tag) => achievementTagMap.get(tag))}
           </Flex>
           <Text as="p" size="3">
             {description}
           </Text>
+          {links?.map(([text, url]) => (
+            <Link href={url}>
+              <Text as="p" size="2">{text}</Text>
+            </Link>
+          ))}
           <Text as="p" size="1" color="gray" mt=".5rem">
             {showDetail ? date.toLocaleDateString("ja-JP") : dateDetail}
           </Text>
