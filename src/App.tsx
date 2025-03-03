@@ -82,7 +82,7 @@ function App() {
             Web programmer
             <wbr />{" "}
             <Text as="span" color="blue">
-              @Matsue City / @Hiroshima City Japan
+              @Kyoto / @Hiroshima
             </Text>
           </Text>
         </Flex>

@@ -12,7 +12,7 @@ const aboutMeData: [string, ReactNode][] = [
     ],
     [
         "在住地",
-        <Text>島根県松江市</Text>
+        <Text>京都府京都市</Text>
     ],
     [
         "肩書き",
