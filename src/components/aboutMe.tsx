@@ -15,12 +15,12 @@ const aboutMeData: [string, ReactNode][] = [
         <Text>京都府京都市</Text>
     ],
     [
-        "肩書き",
-        <Text>学生 (高専 本科5年生)</Text>
+        "所属",
+        <Text>--- (しばらくお待ち下さい)</Text>
     ],
     [
-        "所属",
-        <Text>松江工業高専 情報工学科</Text>
+        "職業",
+        <Text>プログラマー (25卒)</Text>
     ],
     [
         "主なプログラミング言語",
