@@ -3,24 +3,20 @@ import { ReactNode } from "react"
 
 const aboutMeData: [string, ReactNode][] = [
     [
-        "年齢",
+        "年齢 (Age)",
         <Text as="p">20</Text>
     ],
     [
-        "出身地",
-        <Text>広島県広島市</Text>
+        "出身地 (Birthplace)",
+        <Text>広島県広島市 (Hiroshima)</Text>
     ],
     [
-        "在住地",
-        <Text>京都府京都市</Text>
+        "在住地 (Residential Area)",
+        <Text>京都府京都市 (Kyoto)</Text>
     ],
     [
-        "所属",
-        <Text>--- (しばらくお待ち下さい)</Text>
-    ],
-    [
-        "職業",
-        <Text>プログラマー (25卒)</Text>
+        "所属 (Worked at)",
+        <Text><a href="https://www.hatena.co.jp/">株式会社 はてな (Hatena Co., Ltd.)</a></Text>
     ],
     [
         "主なプログラミング言語",
