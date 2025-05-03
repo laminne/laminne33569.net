@@ -92,8 +92,6 @@ function App() {
         <Flex direction="column" justify="center" align="center">
           <Box maxWidth="50rem">
             <Text wrap="wrap" as="p" mb="2.5rem">
-              松江高専の5年生です.
-              <br />
               Web系を中心にプログラミングをしています.
               <br />
               基本的に
@@ -122,6 +120,7 @@ function App() {
             <Callout.Text>
               ここは内容が充実していません。
               <br />
+              それはそうとして
               <Link href="https://github.com/laminne/laminne33569.net">
                 laminne/laminne33569.net
               </Link>
