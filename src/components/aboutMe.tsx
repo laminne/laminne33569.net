@@ -4,7 +4,7 @@ import { ReactNode } from "react"
 const aboutMeData: [string, ReactNode][] = [
     [
         "年齢 (Age)",
-        <Text as="p">20</Text>
+        <Text as="p">21</Text>
     ],
     [
         "出身地 (Birthplace)",
