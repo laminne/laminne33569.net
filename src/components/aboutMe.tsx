@@ -15,7 +15,7 @@ const aboutMeData: [string, ReactNode][] = [
         <Text>京都府京都市 (Kyoto)</Text>
     ],
     [
-        "所属 (Worked at)",
+        "所属 (Working at)",
         <Text><a href="https://www.hatena.co.jp/">株式会社 はてな (Hatena Co., Ltd.)</a></Text>
     ],
     [
